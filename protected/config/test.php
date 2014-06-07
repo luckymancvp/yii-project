@@ -8,6 +8,11 @@ return CMap::mergeArray(
                 'class'=>'system.test.CDbFixtureManager',
             ),
 
+            'db'=>array(
+                'enableProfiling'=>true,
+                'enableParamLogging'=>true,
+            ),
+
             'urlManager'=>array(
                 'urlFormat' => 'path',
                 'showScriptName' => true,
@@ -22,7 +27,7 @@ return CMap::mergeArray(
                 'class'=>'CLogRouter',
                 'routes'=>array(
                     array(
-                        'class'=>'CWebLogRoute',
+                        'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
                     ),
 
                 ),
